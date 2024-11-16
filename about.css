@@ -1,0 +1,153 @@
+/* General about section */
+.about-section {
+  background-color: #f9f9f9; /* Light gray for a professional look */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+/* Header styles */
+.about-section h1,
+.about-section h2 {
+  text-align: center;
+  color: #333; /* Dark gray for readability */
+  animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+/* Paragraph text styles */
+.about-content p {
+  line-height: 1.6;
+  color: #555; /* Darker gray for text */
+  font-size: 1rem;
+}
+
+/* Strong text styles */
+.about-content strong {
+  color: #1a73e8; /* Professional blue for emphasis */
+}
+
+/* Info box style */
+.info-box {
+  background: #1a73e8; /* Professional blue */
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Subtle hover effect */
+  animation: slideUp 1s ease-out; /* Slide-in animation */
+}
+
+.info-box:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Info box heading */
+.info-box h2 {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Centered text */
+.text-center {
+  text-align: center;
+  color: #333;
+}
+
+/* Container for general layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .info-box {
+    margin-bottom: 15px;
+  }
+
+  .about-section {
+    padding: 15px;
+  }
+
+  .info-box {
+    padding: 15px;
+  }
+
+  .info-box h2 {
+    font-size: 1.15rem;
+  }
+
+  .info-box p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Icon styling */
+.icon2 svg {
+  margin: 0px 12px;
+  color: #1a73e8; /* Blue color for icons */
+  width: 28px;
+  height: 28px;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.icon2 svg:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Navbar styling */
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar hover effect */
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+  background-color: #007bff; /* Professional blue background */
+  border-radius: 5px;
+}
+
+/* Fade-in animation for headers */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-up animation for info boxes */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
