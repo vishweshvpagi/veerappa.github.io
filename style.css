@@ -1,106 +1,79 @@
-/* Ensure the navbar takes full width and has proper styling */
+/* Reset and base styling for consistent layout across devices */
 body,
 html {
   margin: 0;
   padding: 0;
   height: 100%;
   overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
+/* Navbar styling */
 .navbar {
   margin-bottom: 0;
   display: flex;
   width: 100%;
   background-color: #f8f9fa;
-  /* Light background for visibility */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Adjust the navbar toggler for small screens */
+/* Navbar toggler for responsive screens */
 .navbar-toggler {
   margin-right: 15px;
+  border: none;
 }
 
-/* Content styling to ensure proper layout */
+/* Navbar items alignment and hover effects */
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.5s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+/* Content styling for flexible layout */
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
-  height: calc(100vh - 56px); /* Adjust height based on navbar height */
+  height: calc(100vh - 56px); /* Adjust height considering navbar */
   text-align: center;
   padding: 10px;
 }
 
-/* Ensure the content sections adjust */
+/* Styling for image and text sections */
 .part1,
 .part2 {
   width: 100%;
   margin: 20px;
   text-align: center;
 }
+
 .part1 img {
   width: 100%;
   height: auto;
   max-height: 50%;
   border-radius: 5px;
   padding-bottom: 16%;
-}
-
-/* Adjust for larger screens */
-@media (min-width: 769px) {
-  .content {
-    flex-direction: row;
-    padding-top: 0; /* Remove top padding on larger screens */
-  }
-  .part1,
-  .part2 {
-    width: 50%;
-  }
-}
-
-/* Footer styling */
-.foot {
-  background-color: rgb(48, 54, 55);
-  background-color: #333;
-  color: aliceblue;
-  padding: 10px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-}
-
-.icon2 svg {
-  margin: 0px 20px 0px 10px;
-  color: aliceblue;
-  width: 32px;
-  height: 32px;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px 10px 0px 10px;
-  border-radius: 5px;
-}
-.navbar-nav .nav-link {
-  display: flex;
-  align-items: center; /* Align text vertically */
-  padding: 10px; /* Space around text */
-  text-decoration: none; /* Remove underline */
-  color: #000; /* Default text color */
-  transition: color 0.5s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition */
-}
-
-/* Hover effect */
-.navbar-nav .nav-link:hover {
-  color: #fff; /* Text color on hover */
-  background-color: grey;
-  border-radius: 5px;
-  /* Background color on hover */
+  object-fit: cover;
 }
 
 .text-container {
@@ -116,4 +89,43 @@ html {
 .animated-text:hover {
   transform: scale(1.5);
   color: #000000;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 769px) {
+  .content {
+    flex-direction: row;
+    padding-top: 0; /* Remove top padding on larger screens */
+  }
+  .part1,
+  .part2 {
+    width: 50%;
+  }
+}
+
+/* Footer styling for a clean look */
+.foot {
+  background-color: #333;
+  color: aliceblue;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for footer icons */
+.icon2 svg {
+  margin: 0 20px 0 10px;
+  color: aliceblue;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon2 svg:hover {
+  color: #00aced;
+  transform: scale(1.2);
 }
