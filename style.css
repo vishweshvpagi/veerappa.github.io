@@ -14,6 +14,8 @@ html {
   width: 100%;
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between; /* Align items properly */
+  padding: 10px 20px;
 }
 
 .navbar-toggler {
@@ -49,27 +51,26 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 56px);
+  height: calc(100vh - 56px); /* Adjust height based on navbar */
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Sections */
 .part1,
 .part2 {
   width: 100%;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .part1 img {
   width: 100%;
   height: auto;
-  max-height: 50%;
+  max-height: 50%; /* Prevent image from becoming too large */
   border-radius: 5px;
   object-fit: cover;
 }
 
-/* Animated text */
 .text-container {
   text-align: center;
 }
@@ -94,9 +95,9 @@ html {
   position: fixed;
   bottom: 0;
   width: 100%;
+  box-sizing: border-box;
 }
 
-/* Footer icons */
 .icon2 svg {
   margin: 0 20px 0 10px;
   color: aliceblue;
@@ -112,24 +113,25 @@ html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  /* Stack content vertically */
+  /* Stack content vertically for medium screens */
   .content {
     flex-direction: column;
     padding: 20px;
   }
 
-  /* Sections take full width */
   .part1,
   .part2 {
     width: 100%;
     margin: 10px 0;
   }
 
+  /* Adjust image height */
   .part1 img {
-    max-height: 200px;
+    min-height: 200px;
+    object-fit: cover; /* Ensure image scales proportionally */
   }
 
-  /* Reduce padding and font sizes */
+  /* Adjust font sizes for better readability */
   .animated-text {
     font-size: 1.5em;
   }
@@ -139,7 +141,14 @@ html {
     font-size: 0.9em;
   }
 
-  /* Footer adjustments */
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin-top: 10px;
+  }
+
+  /* Footer adjustments for smaller screens */
   .foot {
     padding: 8px;
     font-size: 0.8em;
@@ -147,16 +156,32 @@ html {
 }
 
 @media (max-width: 480px) {
-  /* Smaller devices */
+  /* Smaller devices styling */
   .navbar {
     flex-direction: column;
+    padding: 10px;
   }
 
+  /* Animated text size adjustments for small screens */
   .animated-text {
     font-size: 1.2em;
   }
 
+  /* Image adjustments for very small screens */
   .part1 img {
-    max-height: 150px;
+    max-height: 150px; /* Restrict max height for small devices */
+    object-fit: cover;
+  }
+
+  /* Text size adjustments */
+  .navbar-nav .nav-link {
+    padding: 6px;
+    font-size: 0.8em;
+  }
+
+  /* Footer size adjustment */
+  .foot {
+    padding: 6px;
+    font-size: 0.7em;
   }
 }
